@@ -1,7 +1,3 @@
-SELECT 
-    job_title,
-    AVG(max_salary - min_salary) AS `Diferença média entre salários mínimos e máximos`
-FROM
-    hr.jobs
-GROUP BY job_title
-ORDER BY `Diferença média entre salários mínimos e máximos`;
+SELECT job_title AS 'Cargo', (max_salary - min_salary) AS 'Diferença entre salários máximo e mínimo'
+FROM hr.jobs
+ORDER BY (max_salary - min_salary), job_title;
