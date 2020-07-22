@@ -13,6 +13,3 @@ SELECT Cargo, `Média salarial`,
       GROUP BY Cargo
       ORDER BY `Média salarial` ASC, Cargo
     ) AS `Média`;
-
-
-
