@@ -5,4 +5,5 @@ SELECT
     "incluído",
     "não incluído"
   ) AS "Status Inclusão"
-FROM hr.countries AS country;
+FROM hr.countries AS country
+ORDER BY País ASC;
