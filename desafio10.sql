@@ -7,4 +7,5 @@ FROM w3schools.order_details as od
 JOIN w3schools.products AS p
 ON od.ProductID = p.ProductID
 GROUP BY od.ProductID
+HAVING ROUND(AVG(od.Quantity), 2) > 20
 ORDER BY `Média`, Produto;
