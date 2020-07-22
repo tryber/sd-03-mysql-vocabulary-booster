@@ -1,8 +1,2 @@
-SELECT COUNTRY_NAME AS 'País',
-        
-    CASE
-    WHEN REGION_ID = 1 THEN
-    'incluído'
-    ELSE 'Não incluido'
-    END AS 'Status Inclusão'
+SELECT COUNTRY_NAME AS 'País', IF (REGION_ID = 1, 'incluído', 'não incluído') AS "Status Inclusão"
 FROM hr.countries; 
