@@ -1,7 +1,7 @@
 SELECT 
-    (SELECT JOB_TITLE
+    (SELECT job_title
     FROM hr.jobs
-    WHERE JOB_TITLE = employee.JOB_TITLE) AS Cargo, ROUND(AVG(salary), 2) AS 'Média salarial',
+    WHERE job_id = employee.job_id) AS Cargo, ROUND(AVG(salary), 2) AS 'Média salarial',
     CASE
     WHEN ROUND(AVG(salary), 2)
     BETWEEN 2000
@@ -19,5 +19,5 @@ SELECT
     'CEO'
     END AS 'Senioridade'
 FROM hr.employees AS employee
-GROUP BY  JOB_TITLE
+GROUP BY  job_id
 ORDER BY  ROUND(AVG(salary), 2) ASC, Cargo ASC;
