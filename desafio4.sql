@@ -10,4 +10,4 @@ FROM hr.jobs AS jobs
   INNER JOIN hr.employees AS employees ON jobs.JOB_ID = employees.JOB_ID
 GROUP BY jobs.job_title
 ORDER BY ROUND(AVG(employees.SALARY), 2),
-  Cargo;
+  jobs.JOB_TITLE;
