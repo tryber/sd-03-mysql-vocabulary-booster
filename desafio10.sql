@@ -5,5 +5,6 @@ SELECT products.ProductName AS Produto,
 FROM w3schools.products AS products
   INNER JOIN w3schools.order_details AS order_details ON order_details.ProductID = products.ProductID
 GROUP BY products.ProductName
+HAVING ROUND(AVG(order_details.Quantity), 2) > 20.00
 ORDER BY ROUND(AVG(order_details.Quantity), 2),
   products.ProductName;
