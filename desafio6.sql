@@ -1,8 +1,3 @@
-SELECT * FROM hr.job_history;
-SELECT * FROM hr.jobs;
-SELECT * FROM hr.employees;
-SELECT * FROM hr.departments;
-
 SELECT
 (SELECT CONCAT(first_name, ' ', last_name) FROM hr.employees WHERE employee_id = JH.employee_id) AS 'Nome completo',
 (SELECT job_title FROM hr.jobs WHERE job_id = JH.job_id)AS Cargo,
