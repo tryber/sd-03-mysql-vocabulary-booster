@@ -1,5 +1,3 @@
-select * from jobs;
-
 select job_title as Cargo, 
 case 
 WHEN max_SALARY BETWEEN (5000) AND (10000) THEN 'Baixo'
