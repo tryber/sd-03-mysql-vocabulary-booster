@@ -1,0 +1,11 @@
+SELECT COUNTRY_NAME AS País, 
+IF(REGION_ID = 1, 'incluido', 'não incluido') as 'Status Inclusão'  FROM hr.countries ORDER BY País;
+
+SELECT JOB_TITLE AS Cargo, (
+CASE
+	WHEN MAX_SALARY BETWEEN 5000 AND 10000 THEN 'Baixo'
+    WHEN MAX_SALARY BETWEEN 5000 AND 10000 THEN 'Médio'
+    WHEN MAX_SALARY BETWEEN 5000 AND 10000 THEN 'Alto'
+ELSE 'Altíssimo'
+END
+) as Nível FROM hr.jobs ORDER BY Cargo;
