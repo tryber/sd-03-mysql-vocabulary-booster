@@ -10,5 +10,5 @@ start_date AS 'Data de início do cargo',
 (SELECT department_name FROM hr.departments WHERE department_id = JH.department_id) AS Departamento
 FROM hr.job_history AS JH
 ORDER BY
-(SELECT CONCAT(first_name, ' ', last_name) FROM hr.employees WHERE employee_id = JH.employee_id) DESC,
+1 DESC,
 Cargo ASC;
