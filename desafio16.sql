@@ -1,4 +1,4 @@
- DELIMITER $$ CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(emailin VARCHAR(100)) RETURNS INT READS SQL DATA BEGIN DECLARE quant INT;SELECT COUNT(*)
+DELIMITER $$ CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(emailin VARCHAR(100)) RETURNS INT READS SQL DATA BEGIN DECLARE quant INT;SELECT COUNT(*)
 FROM hr.job_history
 WHERE EMPLOYEE_ID = 
     (SELECT EMPLOYEE_ID

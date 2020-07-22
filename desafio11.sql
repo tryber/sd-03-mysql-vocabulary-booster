@@ -1,6 +1,6 @@
 SELECT a.ContactName AS Nome,
-         a.Country AS `País`,
-         COUNT(*)
+          a.Country AS `País`,
+          COUNT(*)
 FROM w3schools.customers AS a, w3schools.customers AS b
 WHERE a.country = b.country
         AND a.ContactName <> b.ContactName
