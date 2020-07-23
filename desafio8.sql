@@ -13,4 +13,3 @@ WHERE
         AND b.ShipperID = c.ShipperID
         AND b.ShipperID IN (1 , 2)
 ORDER BY `Nome de contato` ASC;
- 
