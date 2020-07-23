@@ -11,6 +11,4 @@ SELECT CONCAT(first_name, ' ', last_name) AS 'Nome completo',
         WHERE emp.department_id LIKE department_id
     ) AS 'Departamento'
 FROM hr.employees AS emp
-GROUP BY first_name,
-    last_name
 ORDER BY `Nome completo` DESC, Cargo; 
