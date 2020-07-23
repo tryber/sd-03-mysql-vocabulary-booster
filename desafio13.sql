@@ -1,4 +1,4 @@
-SELECT products.ProductName AS 'Produto',
+SELECT products.ProductName AS `Produto`,
   products.Price As 'Preço'
 FROM w3schools.products AS products
 WHERE (
@@ -7,4 +7,4 @@ WHERE (
     WHERE order_details.ProductID = products.ProductID
       AND order_details.Quantity > 80
   )
-ORDER BY 1;
+ORDER BY `Produto`;
