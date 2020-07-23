@@ -7,4 +7,3 @@ FROM w3schools.customers AS C
     ON O.shipperID = S.shipperID AND (S.shipperName = 'Speedy Express' OR S.shipperName = 'United Package')
 
 ORDER BY customerName, S.shipperName, O.orderDate;
-
