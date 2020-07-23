@@ -6,5 +6,5 @@ SELECT UCASE(
 FROM hr.employees AS employees
   INNER JOIN hr.job_history AS job_history ON employees.EMPLOYEE_ID = job_history.EMPLOYEE_ID
 WHERE MONTH(job_history.START_DATE) IN ('01', '02', '03')
-ORDER BY `Nome completo`,
-  job_history.START_DATE;
+ORDER BY `Nome completo` ASC,
+  job_history.START_DATE ASC;
