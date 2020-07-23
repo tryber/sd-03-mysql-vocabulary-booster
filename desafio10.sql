@@ -7,4 +7,4 @@ FROM w3schools.order_details as o
 Inner join w3schools.products as p on p.ProductID=o.ProductID
 Group BY o.productID
 HAving AVG(Quantity) > 20
-ORDER BY AVG(Quantity), 1;
+ORDER BY 4, 1;
