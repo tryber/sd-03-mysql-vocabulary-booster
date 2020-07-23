@@ -1,5 +1,5 @@
-SELECT customers1.ContactName AS Nome,
-  customers1.Country AS País,
+SELECT customers1.ContactName AS 'Nome',
+  customers1.Country AS 'País',
   COUNT(customers1.ContactName) AS `Número de compatriotas`
 FROM w3schools.customers AS customers1,
   w3schools.customers AS customers2

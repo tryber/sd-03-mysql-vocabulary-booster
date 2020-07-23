@@ -1,0 +1,11 @@
+SELECT employees1.FIRST_NAME AS `Nome completo funcionário 1`,
+  employees1.SALARY AS `Salário funcionário 1`,
+  employees1.PHONE_NUMBER AS `Telefone funcionário 1`,
+  employees2.FIRST_NAME AS `Nome completo funcionário 2`,
+  employees2.SALARY AS `Salário funcionário 2`,
+  employees2.PHONE_NUMBER AS `Telefone funcionário 2`
+  FROM hr.employees AS employees1,
+  hr.employees AS employees2
+  WHERE
+  employees1.JOB_ID = employees2.JOB_ID
+  ORDER BY `Nome completo funcionário 1`, `Nome completo funcionário 2`;
