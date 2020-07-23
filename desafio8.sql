@@ -9,10 +9,7 @@ FROM
         INNER JOIN
     w3schools.shippers AS S
 WHERE
-	  O.CustomerID = C.CustomerID AND
-    O.ShipperID = S.ShipperID AND
-    S.ShipperID IN (1 , 2)
-ORDER BY
-	  C.ContactName ASC,
-    S.ShipperName ASC,
-    O.OrderDate ASC;
+    O.CustomerID = C.CustomerID
+        AND O.ShipperID = S.ShipperID
+        AND S.ShipperID IN (1 , 2)
+ORDER BY C.ContactName ASC , S.ShipperName ASC , O.OrderDate ASC;
