@@ -9,5 +9,4 @@ SELECT (
 FROM w3schools.order_details AS ordDet
 GROUP BY `Produto`
 HAVING `Média` > 20.00
-ORDER BY `Média`,
-  `Produto`;
+ORDER BY `Média`, `Produto`;
