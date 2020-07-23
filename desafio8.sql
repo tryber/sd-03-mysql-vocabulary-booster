@@ -9,7 +9,7 @@ w3schools.shippers AS S
 WHERE
 (D.CustomerID = C.CustomerID) AND
 (D.ShipperID = S.ShipperID) AND
-(S.ShipperName = 'Speedy Express' OR S.ShipperName = 'United Package')
+((S.ShipperName = 'Speedy Express') OR (S.ShipperName = 'United Package'))
 ORDER BY
 C.ContactName ASC,
 S.ShipperName ASC,
