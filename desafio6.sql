@@ -13,9 +13,4 @@ SELECT CONCAT(first_name, ' ', last_name) AS 'Nome completo',
 FROM hr.employees AS emp
 GROUP BY first_name,
     last_name
-ORDER BY CONCAT(first_name, ' ', last_name) DESC,
-    (
-        SELECT job_title
-        FROM hr.jobs AS job
-        WHERE emp.job_id = job_id
-    );
+ORDER BY `Nome completo` DESC, Cargo; 
