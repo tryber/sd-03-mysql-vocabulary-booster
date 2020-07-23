@@ -3,5 +3,5 @@ SELECT
   (SELECT JOB_TITLE FROM hr.jobs WHERE jobs.JOB_ID = job_history.JOB_ID) AS Cargo,
   START_DATE AS "Data de início do cargo",
   (SELECT DEPARTMENT_NAME FROM hr.departments WHERE departments.DEPARTMENT_ID = job_history.DEPARTMENT_ID)AS Departamento
-FROM hr.job_history
+FROM hr.job_history LIMIT 10
 ORDER BY `Nome completo` ASC;
