@@ -8,6 +8,6 @@ SELECT jobs.JOB_TITLE AS 'Cargo',
   END AS 'Senioridade'
 FROM hr.jobs AS jobs
   INNER JOIN hr.employees AS employees ON jobs.JOB_ID = employees.JOB_ID
-GROUP BY jobs.job_title
-ORDER BY `Média Salarial` ASC,
-  jobs.JOB_TITLE ASC;
+GROUP BY jobs.JOB_TITLE
+ORDER BY `Média Salarial`,
+  jobs.JOB_TITLE;
