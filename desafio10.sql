@@ -7,10 +7,10 @@
 
 -- Os resultados devem estar ordenados pela média de quantidade nos pedidos em ordem crescente. Em caso de empate na média, os resultados devem ser ordenados pelo nome do produto em ordem alfabética.
 SELECT
-	(SELECT ProductName FROM products WHERE products.ProductID = order_details.ProductID) as `Produto`,
-    MIN(Quantity) AS `Mínima`,
-    MAX(Quantity) AS `Máxima`,
-    ROUND(AVG(Quantity), 2) AS `Média`
+(SELECT ProductName FROM products WHERE products.ProductID = order_details.ProductID) as `Produto`,
+MIN(Quantity) AS `Mínima`,
+MAX(Quantity) AS `Máxima`,
+ROUND(AVG(Quantity), 2) AS `Média`
 FROM order_details
 GROUP BY ProductID
 HAVING AVG(Quantity) > 20

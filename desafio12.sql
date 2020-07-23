@@ -16,9 +16,9 @@
 -- Os resultados devem estar ordenados pela coluna "Nome completo funcionário 1" em ordem alfabética. Em caso de empate, os resultados devem ser ordenados pela coluna Nome completo funcionário 2" em ordem alfabética.
 SELECT * FROM employees;
 SELECT
-	CONCAT(FIRST_NAME, ' ', LAST_NAME) AS `Nome completo funcionário 1`,
-    SALARY AS `Salário funcionário 1`,
-    PHONE_NUMBER AS `Telefone funcionário 1`
+CONCAT(FIRST_NAME, ' ', LAST_NAME) AS `Nome completo funcionário 1`,
+SALARY AS `Salário funcionário 1`,
+PHONE_NUMBER AS `Telefone funcionário 1`
 FROM employees
 
 GROUP BY JOB_ID;

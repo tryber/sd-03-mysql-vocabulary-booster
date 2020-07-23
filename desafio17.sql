@@ -8,9 +8,9 @@
 -- Os resultados devem estar ordenados pelo nome completo das pessoas empregadas em ordem alfabética. Em caso de empate no nome completo, ordene os resultados pelos anos trabalhados por ela no cargo em questão, em ordem crescente.
 
 SELECT CONCAT(E.FIRST_NAME, ' ', E.LAST_NAME) AS `Nome completo`,
-	date_format(H.START_DATE, '%d/%m/%Y') AS `Data de início`,
-    date_format(H.END_DATE, '%d/%m/%Y') AS `Data de rescisão`,
-    ROUND(datediff(H.END_DATE, H.START_DATE) / 365, 2) AS `Anos trabalhados`
+date_format(H.START_DATE, '%d/%m/%Y') AS `Data de início`,
+date_format(H.END_DATE, '%d/%m/%Y') AS `Data de rescisão`,
+ROUND(datediff(H.END_DATE, H.START_DATE) / 365, 2) AS `Anos trabalhados`
 FROM job_history as H
 INNER JOIN employees as E
 ON E.EMPLOYEE_ID = H.EMPLOYEE_ID

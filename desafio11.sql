@@ -14,9 +14,9 @@
 -- Os resultados devem estar ordenados pelo nome de contato da pessoa cliente em ordem alfabética.
 
 SELECT 
-	ContactName AS `Nome`,
-    Country AS `País`,
-    COUNT(*) AS `Número de compatriotas`
+ContactName AS `Nome`,
+Country AS `País`,
+COUNT(*) AS `Número de compatriotas`
 FROM w3schools.customers
 GROUP BY Country
 HAVING `Número de compatriotas` > 1

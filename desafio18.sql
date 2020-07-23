@@ -5,11 +5,11 @@ SET DELIMITER $$
 CREATE FUNCTION exibir_quantidade_pessoas_contratadas_por_mes_e_ano(mes TINYINT(2), ano INT(4))
 RETURNS TINYINT(2)
 BEGIN
-	DECLARE contagem TINYINT(2);
-	SELECT COUNT(*) FROM employees
-    WHERE MONTH(HIRE_DATE) = mes AND YEAR(HIRE_DATE) = ano
-    INTO contagem;
-    RETURN contagem;
+DECLARE contagem TINYINT(2);
+SELECT COUNT(*) FROM employees
+WHERE MONTH(HIRE_DATE) = mes AND YEAR(HIRE_DATE) = ano
+INTO contagem;
+RETURN contagem;
 END $$
 SET DELIMITER ;
 

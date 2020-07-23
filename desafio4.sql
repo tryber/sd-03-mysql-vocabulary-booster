@@ -13,15 +13,15 @@
 -- Os resultados devem estar ordenados pela média salarial em ordem crescente. Em caso de empate na média, os resultados devem ser ordenados pelo nome do cargo em ordem alfabética.
 
 SELECT
-	(SELECT JOB_TITLE FROM jobs WHERE jobs.JOB_ID = employees.JOB_ID) as 'Cargo',
-    ROUND(AVG(SALARY), 2) AS 'Média salarial',
-	CASE
-		WHEN AVG(SALARY) BETWEEN 2000 AND 5800 THEN 'Júnior'
-		WHEN AVG(SALARY) BETWEEN 5801 AND 7500 THEN 'Pleno'
-		WHEN AVG(SALARY) BETWEEN 7501 AND 10500 THEN 'Sênior'
-		WHEN AVG(SALARY) > 10500 THEN 'CEO'
-		ELSE 'Meeeh'
-	END AS 'Senioridade'
+(SELECT JOB_TITLE FROM jobs WHERE jobs.JOB_ID = employees.JOB_ID) as 'Cargo',
+ROUND(AVG(SALARY), 2) AS 'Média salarial',
+CASE
+WHEN AVG(SALARY) BETWEEN 2000 AND 5800 THEN 'Júnior'
+WHEN AVG(SALARY) BETWEEN 5801 AND 7500 THEN 'Pleno'
+WHEN AVG(SALARY) BETWEEN 7501 AND 10500 THEN 'Sênior'
+WHEN AVG(SALARY) > 10500 THEN 'CEO'
+ELSE 'Meeeh'
+END AS 'Senioridade'
 FROM employees
 GROUP BY JOB_ID
 ORDER BY AVG(SALARY), Cargo;

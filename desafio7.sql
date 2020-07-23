@@ -7,8 +7,8 @@
 -- Os resultados devem estar ordenados pelo nome completo das pessoas empregadas em ordem alfabética. Em caso de empate no nome completo, ordene os resultados pela data de início que a pessoa iniciou seu cargo, em ordem crescente.
 
 SELECT UCASE(CONCAT(E.FIRST_NAME, ' ', E.LAST_NAME)) AS `Nome completo`,
-    H.START_DATE AS 'Data de início',
-    E.SALARY AS 'Salário'
+H.START_DATE AS 'Data de início',
+E.SALARY AS 'Salário'
 FROM job_history AS H
 INNER JOIN employees AS E ON H.EMPLOYEE_ID = E.EMPLOYEE_ID
 INNER JOIN jobs AS J ON J.JOB_ID = E.JOB_ID

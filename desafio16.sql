@@ -5,10 +5,10 @@ DELIMITER $$
 CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(input_email VARCHAR(25))
 RETURNS INT(2)
 BEGIN
-	DECLARE contagem INT(2);
-	SELECT COUNT(*) FROM job_history WHERE EMPLOYEE_ID = (SELECT EMPLOYEE_ID FROM employees WHERE EMAIL = input_email)
-    INTO contagem;
-    RETURN contagem;
+DECLARE contagem INT(2);
+SELECT COUNT(*) FROM job_history WHERE EMPLOYEE_ID = (SELECT EMPLOYEE_ID FROM employees WHERE EMAIL = input_email)
+INTO contagem;
+RETURN contagem;
 END $$
 
 DELIMITER ;

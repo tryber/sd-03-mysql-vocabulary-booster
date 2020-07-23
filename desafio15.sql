@@ -5,16 +5,12 @@
 
 USE hr;
 DELIMITER $$
-CREATE PROCEDURE buscar_media_por_cargo(
-	IN job_title VARCHAR(35),
-    OUT average_salary DECIMAL(8,2)
-)
+CREATE PROCEDURE buscar_media_por_cargo(IN job_title VARCHAR(35))
 BEGIN
-	SELECT ROUND(AVG(SALARY), 2) INTO average_salary
+	SELECT ROUND(AVG(SALARY), 2) as `Média salarial`
     FROM employees
     WHERE JOB_ID = (SELECT JOB_ID FROM jobs WHERE JOB_TITLE = job_title);
 END $$
 DELIMITER ;
 
-CALL buscar_media_por_cargo('Accountant', @desafio15);
-SELECT @desafio15;
+CALL buscar_media_por_cargo('Accountant');

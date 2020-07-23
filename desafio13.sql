@@ -6,8 +6,8 @@
 -- Os resultados devem estar ordenados pelo nome do produto em ordem alfabética.
 
 SELECT
-	(SELECT ProductName FROM products WHERE products.ProductID = order_details.ProductID) AS Produto,
-    (SELECT Price FROM products WHERE products.ProductID = order_details.ProductID) AS Preço
+(SELECT ProductName FROM products WHERE products.ProductID = order_details.ProductID) AS Produto,
+(SELECT Price FROM products WHERE products.ProductID = order_details.ProductID) AS Preço
 FROM order_details
 WHERE Quantity > 80
 ORDER BY Produto ASC;

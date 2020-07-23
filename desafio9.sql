@@ -5,8 +5,8 @@
 
 -- Ordene seus resultados pelo total de pedidos em ordem crescente.
 SELECT 
-	(SELECT CONCAT(FirstName, ' ', LastName) FROM employees WHERE employees.EmployeeID = orders.EmployeeID) AS `Nome completo`,
-    COUNT(*) AS `Total de pedidos`
+(SELECT CONCAT(FirstName, ' ', LastName) FROM employees WHERE employees.EmployeeID = orders.EmployeeID) AS `Nome completo`,
+COUNT(*) AS `Total de pedidos`
 FROM orders
 GROUP BY `Nome completo`
 ORDER BY `Total de pedidos`;
