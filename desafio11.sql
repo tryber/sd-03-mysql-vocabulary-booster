@@ -1,12 +1,12 @@
 SELECT
-    CustomerName,
-    Country,
+    C1.ContactName AS Nome,
+    C1.Country AS País,
     (SELECT
-            COUNT(Country)
+            COUNT(Country) - 1
         FROM
             w3schools.customers AS C2
         WHERE
-            C1.Country = C2.Country)
+            C2.Country = C1.Country) AS `Número de compatriotas`
 FROM
     w3schools.customers AS C1
-GROUP BY CustomerName;
+ORDER BY ContactName ASC;
