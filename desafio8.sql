@@ -9,8 +9,8 @@ FROM
         INNER JOIN
     w3schools.orders AS c
 WHERE
-		c.CustomerID = a.CustomerID
-    AND b.ShipperID = c.ShipperID
-    AND b.ShipperID IN (1 , 2)
+    c.CustomerID = a.CustomerID
+        AND b.ShipperID = c.ShipperID
+        AND b.ShipperID IN (1 , 2)
 ORDER BY `Nome de contato` ASC;
  
