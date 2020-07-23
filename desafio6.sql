@@ -22,4 +22,4 @@ FROM
     hr.job_history
 WHERE
     YEAR(START_DATE) <> 0
-ORDER BY `Nome completo` ASC;
+ORDER BY `Nome completo` DESC, `Cargo` ASC;
