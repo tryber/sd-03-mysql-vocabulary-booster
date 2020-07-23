@@ -1,6 +1,6 @@
 SELECT 
     UCASE(CONCAT(a.FIRST_NAME, ' ', a.LAST_NAME)) AS `Nome completo`,
-    b.START_DATE AS `Data de início do cargo`,
+    b.START_DATE AS `Data de início`,
     a.SALARY AS Salário
 FROM
     hr.employees AS a
