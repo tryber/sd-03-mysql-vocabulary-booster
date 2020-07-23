@@ -12,4 +12,4 @@ WHERE
     c.CustomerID = a.CustomerID
         AND b.ShipperID = c.ShipperID
         AND b.ShipperID IN (1 , 2)
-ORDER BY `Nome de contato` ASC;
+ORDER BY `Nome de contato` ASC , `Empresa que fez o envio` ASC , `Data do pedido` ASC;
