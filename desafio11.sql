@@ -13,11 +13,12 @@
 
 -- Os resultados devem estar ordenados pelo nome de contato da pessoa cliente em ordem alfabética.
 
-SELECT 
-ContactName AS `Nome`,
-Country AS `País`,
+SELECT
+C1.ContactName AS `Nome`,
+C1.Country AS `País`,
 COUNT(*) AS `Número de compatriotas`
-FROM w3schools.customers
-GROUP BY Country
+FROM customers as C1, customers as C2
+WHERE C1.Country = C2.Country
+GROUP BY C1.ContactName, C1.Country
 HAVING `Número de compatriotas` > 1
-ORDER BY ContactName;
+ORDER BY C1.ContactName;

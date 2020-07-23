@@ -7,4 +7,5 @@
 
 -- Os resultados devem estar ordenados pelo nome do país em ordem alfabética.
 SELECT COUNTRY_NAME as País, if(REGION_ID = 1, 'incluído', 'não incluído') as 'Status Inclusão'
-FROM countries;
+FROM countries
+ORDER BY COUNTRY_NAME;
