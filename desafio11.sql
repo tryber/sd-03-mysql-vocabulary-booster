@@ -16,7 +16,7 @@
 SELECT
 C1.ContactName AS `Nome`,
 C1.Country AS `País`,
-COUNT(*) AS `Número de compatriotas`
+COUNT(*) - 1 AS `Número de compatriotas`
 FROM customers as C1, customers as C2
 WHERE C1.Country = C2.Country
 GROUP BY C1.ContactName, C1.Country
