@@ -7,4 +7,3 @@ b.phone_number as "Telefone funcionário 2"
 from employees as a, employees as b
 where a.job_id = b.job_id and a.employee_id <> b.employee_id
 order by `Nome completo funcionário 1`, `Nome completo funcionário 2`;
- 
