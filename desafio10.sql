@@ -10,4 +10,5 @@ FROM
 WHERE
     OD.ProductID = P.ProductID
 GROUP BY OD.ProductID
-HAVING Média > 20;
+HAVING Média > 20
+ORDER BY Média ASC, Produto ASC;
