@@ -8,6 +8,5 @@ FROM
     hr.job_history AS b
 WHERE
     a.EMPLOYEE_ID = b.EMPLOYEE_ID
-    AND a.SALARY > 7000.00
-    AND a.FIRST_NAME <> 'Neena'
+    AND MONTH(b.START_DATE) IN (01, 02, 03)
 ORDER BY `Nome completo` ASC , b.START_DATE;
