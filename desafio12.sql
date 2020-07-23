@@ -7,6 +7,6 @@ SELECT CONCAT(employees1.FIRST_NAME, ' ', employees1.LAST_NAME) AS `Nome complet
 FROM hr.employees AS employees1,
   hr.employees AS employees2
 WHERE employees1.JOB_ID = employees2.JOB_ID
-  AND employees1.FIRST_NAME <> employees2.FIRST_NAME
+  AND employees1.EMPLOYEE_ID <> employees2.EMPLOYEE_ID
 ORDER BY `Nome completo funcionário 1`,
   `Nome completo funcionário 2`;
