@@ -10,6 +10,4 @@ UNION
   FROM w3schools.suppliers
   ORDER BY Country
   LIMIT 5
-)
-ORDER BY 'País'
-LIMIT 5;
+);
