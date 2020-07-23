@@ -1,7 +1,6 @@
-SELECT COUNTRY_NAME AS País, f.* FROM hr.countries
-INNER JOIN
-(
-SELECT IF(REGION_ID = 1, 'incluído', 'não incluído') as 'Status Inclusão'
+SELECT COUNTRY_NAME AS País, 
+IF(REGION_ID = (SELECT REGION_ID
 FROM hr.regions
-) AS f
+WHERE REGION_ID = 1),
+ 'incluído', 'não incluído') as 'Status Inclusão' FROM hr.countries
 ORDER BY COUNTRY_NAME;
