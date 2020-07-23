@@ -8,6 +8,6 @@ WHERE (
     shippers.ShipperName = 'Speedy Express'
     OR shippers.ShipperName = 'United Package'
   )
-ORDER BY customers.ContactName,
-  shippers.ShipperName,
-  orders.OrderDate;
+ORDER BY `Nome de contato`,
+  `Empresa que fez o envio`,
+  `Data do Pedido`;
