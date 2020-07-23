@@ -7,4 +7,4 @@ WHERE (
     WHERE order_details.ProductID = products.ProductID
       AND order_details.Quantity > 80
   )
-ORDER BY `Produto`;
+ORDER BY `Produto` ASC;
