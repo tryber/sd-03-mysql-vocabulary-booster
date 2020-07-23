@@ -4,4 +4,4 @@ SELECT
   START_DATE AS "Data de início do cargo",
   (SELECT DEPARTMENT_NAME FROM hr.departments WHERE departments.DEPARTMENT_ID = job_history.DEPARTMENT_ID)AS Departamento
 FROM hr.job_history
-ORDER BY `Nome completo` DESC;
+ORDER BY `Nome completo` ASC;
