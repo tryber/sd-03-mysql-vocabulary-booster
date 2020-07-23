@@ -1,5 +1,5 @@
 (
-  SELECT Country AS 'País'
+  SELECT Country AS `País`
   FROM w3schools.customers
 )
 UNION
@@ -7,5 +7,5 @@ UNION
   SELECT Country
   FROM w3schools.suppliers
 )
-ORDER BY 1
+ORDER BY `País`
 LIMIT 5;
