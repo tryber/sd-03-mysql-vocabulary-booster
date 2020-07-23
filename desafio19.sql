@@ -14,12 +14,12 @@ USE hr;
 DELIMITER $$
 CREATE PROCEDURE exibir_historico_completo_por_funcionario(IN input_email VARCHAR(25))
 BEGIN
-	SELECT
-    CONCAT(FIRST_NAME, ' ', LAST_NAME) AS `Nome completo`,
-    (SELECT DEPARTMENT_NAME FROM departments WHERE departments.DEPARTMENT_ID = employees.DEPARTMENT_ID) AS Departamento,
-    (SELECT JOB_TITLE FROM jobs WHERE jobs.JOB_ID = employees.JOB_ID) AS Cargo
-    FROM employees
-    WHERE EMAIL = input_email;
+SELECT
+CONCAT(FIRST_NAME, ' ', LAST_NAME) AS `Nome completo`,
+(SELECT DEPARTMENT_NAME FROM departments WHERE departments.DEPARTMENT_ID = employees.DEPARTMENT_ID) AS Departamento,
+(SELECT JOB_TITLE FROM jobs WHERE jobs.JOB_ID = employees.JOB_ID) AS Cargo
+FROM employees
+WHERE EMAIL = input_email;
 END $$
 SET DELIMITER ;
 
