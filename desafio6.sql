@@ -15,4 +15,4 @@ WHERE
     a.EMPLOYEE_ID = c.EMPLOYEE_ID
         AND b.JOB_ID = c.JOB_ID
         AND d.DEPARTMENT_ID = c.DEPARTMENT_ID
-ORDER BY `Nome Completo` DESC , Cargo;
+ORDER BY `Nome Completo` DESC;

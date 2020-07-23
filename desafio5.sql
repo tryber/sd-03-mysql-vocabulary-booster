@@ -12,4 +12,4 @@ FROM
     FROM
         hr.jobs
     GROUP BY JOB_TITLE
-    ORDER BY `Variação Salarial` ASC , Cargo) AS OK;
+    ORDER BY `Variação Salarial` ASC) AS OK;
