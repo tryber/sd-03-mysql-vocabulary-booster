@@ -11,8 +11,8 @@ SELECT
 C.CustomerName AS `Nome de contato`,
 S.ShipperName AS `Empresa que fez o envio`,
 O.OrderDate AS `Data do pedido`
-FROM orders as O
-INNER JOIN customers as C ON C.CustomerID = O.CustomerID
-INNER JOIN shippers as S ON S.ShipperID = O.ShipperID
-WHERE S.ShipperName = 'Speedy Express' OR S.ShipperName = 'United Package'
-ORDER BY 'Empresa', `Data do pedido`;
+FROM orders AS O
+INNER JOIN customers as C ON O.CustomerID = C.CustomerID
+INNER JOIN shippers as S ON O.ShipperID = S.ShipperID
+WHERE O.ShipperID <> 3
+ORDER BY ContactName, ShipperName, OrderDate;
