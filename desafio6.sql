@@ -1,7 +1,7 @@
 SELECT DISTINCT
 CONCAT(emp.FIRST_NAME, ' ', emp.LAST_NAME) AS `Nome completo`,
 (SELECT j.JOB_TITLE FROM hr.jobs AS j WHERE j.JOB_ID = jh.JOB_ID) AS Cargo,
-emp.HIRE_DATE AS "Data de início do cargo",
+DATE_FORMAT(jh.START_DATE, '%Y-%m-%d') AS "Data de início do cargo",
 (
   SELECT d.DEPARTMENT_NAME FROM hr.departments AS d
   WHERE emp.DEPARTMENT_ID = d.DEPARTMENT_ID
