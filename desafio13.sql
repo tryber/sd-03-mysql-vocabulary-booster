@@ -7,4 +7,3 @@
   GROUP BY products.ProductName
   ORDER BY 1;
 
-  
