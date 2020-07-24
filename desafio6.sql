@@ -6,5 +6,5 @@ start_date AS 'Data de início do cargo',
 FROM hr.job_history AS JH
 WHERE start_date <> 0000-00-00
 ORDER BY
-1 DESC,
+`Nome completo` DESC,
 Cargo ASC;
