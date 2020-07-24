@@ -19,8 +19,9 @@ SELECT
 (SELECT DEPARTMENT_NAME FROM departments WHERE departments.DEPARTMENT_ID = job_history.DEPARTMENT_ID) AS Departamento,
 (SELECT JOB_TITLE FROM jobs WHERE jobs.JOB_ID = job_history.JOB_ID) AS Cargo
 FROM job_history
-WHERE EMPLOYEE_ID = (SELECT EMPLOYEE_ID FROM employees WHERE EMAIL = input_email);
+WHERE EMPLOYEE_ID = (SELECT EMPLOYEE_ID FROM employees WHERE EMAIL = input_email)
+ORDER BY Departamento;
 END $$
 SET DELIMITER ;
 
--- CALL exibir_historico_completo_por_funcionario('JWHALEN');
+-- CALL exibir_historico_completo_por_funcionario('NKOCHHAR');

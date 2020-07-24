@@ -7,7 +7,7 @@
 
 -- Os resultados devem estar ordenados pelo nome completo das pessoas empregadas em ordem decrescente. Em caso de empate no nome completo, ordene os resultados pelo nome do cargo em ordem alfabética.
 
-SELECT CONCAT(e.first_name, ' ', e.last_name) AS `Nome completo`,
+SELECT CONCAT(E.first_name, ' ', E.last_name) AS `Nome completo`,
 J.JOB_TITLE AS Cargo,
 H.START_DATE AS `Data de início do cargo`,
 D.DEPARTMENT_NAME AS `Departamento`

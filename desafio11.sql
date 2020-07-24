@@ -20,5 +20,5 @@ COUNT(*) - 1 AS `Número de compatriotas`
 FROM customers as C1, customers as C2
 WHERE C1.Country = C2.Country
 GROUP BY C1.ContactName, C1.Country
-HAVING `Número de compatriotas` > 1
+HAVING `Número de compatriotas` > 0
 ORDER BY C1.ContactName;
