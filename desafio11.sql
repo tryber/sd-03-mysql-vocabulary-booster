@@ -2,7 +2,7 @@ SELECT
 *
 FROM
 (
-  SELECT CustomerName AS 'Nome', Country AS 'País',
+  SELECT ContactName AS 'Nome', Country AS 'País',
   (
     SELECT
     COUNT(*)-1
