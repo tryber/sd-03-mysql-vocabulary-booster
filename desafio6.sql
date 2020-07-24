@@ -8,4 +8,4 @@ INNER JOIN hr.departments d
 INNER JOIN hr.job_history h
 WHERE e.EMPLOYEE_ID = h.EMPLOYEE_ID AND c.JOB_ID = h.JOB_ID
 AND d.DEPARTMENT_ID = h.DEPARTMENT_ID
-ORDER BY `Nome completo` DESC;
+ORDER BY `Nome completo` DESC, Cargo ASC;
