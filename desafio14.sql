@@ -1,5 +1,5 @@
-SELECT country FROM w3schools.customers
+SELECT country AS País FROM w3schools.customers
 UNION
 SELECT country FROM w3schools.suppliers
-ORDER BY country ASC
+ORDER BY País ASC
 LIMIT 5;
