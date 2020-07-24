@@ -8,4 +8,4 @@ SELECT
             EmployeeID = employee.EmployeeID) AS 'Total de pedidos'
 FROM
     w3schools.employees AS employee
-ORDER BY `Total de pedidos`
+ORDER BY `Total de pedidos`;
