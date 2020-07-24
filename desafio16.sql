@@ -5,7 +5,7 @@ create function buscar_quantidade_de_empregos_por_funcionario(emailparam varchar
 returns int reads sql data
 begin
 declare history_jobs int;
-select count(*) as total_empregos
+select count(*)
 from hr.job_history as jh
 join hr.employees as e
 on e.employee_id = jh.employee_id and e.email = emailparam
