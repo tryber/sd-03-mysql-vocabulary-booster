@@ -1,15 +1,16 @@
-USE hr; 
 DELIMITER $$
-
-CREATE PROCEDURE buscar_media_por_cargo(IN JobTitle VARCHAR(30))
+CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(email VARCHAR(300))
+RETURNS TINYINT READS SQL DATA
 BEGIN
-  SELECT ROUND(AVG(employees.SALARY),2) AS `Média salarial`
-  FROM hr.employees AS employees
-  INNER JOIN hr.jobs AS jobs ON jobs.JOB_ID = employees.JOB_ID
-  WHERE jobs.JOB_TITLE = JobTitle
-  GROUP BY jobs.JOB_TITLE;
-END $$ 
-
+  DECLARE jobs_num TINYINT;
+  SELECT COUNT(jh.EMPLOYEE_ID) AS total_empregos
+  FROM hr.employees AS emp
+  INNER JOIN hr.job_history AS jh
+  ON jh.EMPLOYEE_ID = emp.EMPLOYEE_ID
+  WHERE emp.EMAIL = email
+  INTO jobs_num;
+  RETURN jobs_num;
+END $$
 DELIMITER ;
 
-CALL buscar_media_por_cargo('Programmer');
+SELECT buscar_quantidade_de_empregos_por_funcionario("NKOCHHAR") AS total_empregos;
