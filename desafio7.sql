@@ -1,8 +1,8 @@
 select 
-CONCAT(FIRST_NAME, ' ', LAST_NAME) AS 'Nome Completo',
-START_DATE AS 'Data de início',
-SALARY  AS 'Salário'
-FROM job_history AS H
-INNER JOIN hr.employees
-where MONTH(START_DATE) between 1 AND 3
-ORDER BY CONCAT(FIRST_NAME, ' ', LAST_NAME), START_DATE;
+UCASE(CONCAT(E.FIRST_NAME, ' ', E.LAST_NAME)) AS 'Nome Completo',
+H.START_DATE AS 'Data de início',
+E.SALARY  AS 'Salário'
+FROM hr.job_history AS H
+INNER JOIN hr.employees AS E
+WHERE E.EMPLOYEE_ID = H.EMPLOYEE_ID AND MONTH(START_DATE) IN(01,02,03)
+ORDER BY `Nome Completo`, H.START_DATE;
