@@ -1,11 +1,8 @@
 SELECT 
-    ProductName AS Produto, Price AS Preço
+    (SELECT ProductName FROM w3schools.products AS P WHERE P.ProductID = OD.ProductID) AS Produto, 
+    (SELECT Price FROM w3schools.products AS P WHERE P.ProductID = OD.ProductID) AS Preço
 FROM
-    w3schools.products AS P
-        INNER JOIN
     w3schools.order_details AS OD
 WHERE
-    P.ProductID = OD.ProductID
-GROUP BY Produto
-HAVING MAX(OD.Quantity) > 80
+    Quantity > 80
 ORDER BY Produto;
