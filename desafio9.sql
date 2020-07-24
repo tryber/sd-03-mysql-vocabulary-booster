@@ -8,9 +8,4 @@ SELECT
             EmployeeID = employee.EmployeeID) AS 'Total de pedidos'
 FROM
     w3schools.employees AS employee
-ORDER BY (SELECT 
-        COUNT(employeeID)
-    FROM
-        w3schools.orders
-    WHERE
-        EmployeeID = employee.EmployeeID); 
+ORDER BY `Total de pedidos`
