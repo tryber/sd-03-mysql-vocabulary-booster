@@ -6,4 +6,3 @@
   WHERE w3schools.order_details.Quantity > 80.00
   GROUP BY products.ProductName
   ORDER BY 1;
-
