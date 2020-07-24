@@ -10,4 +10,3 @@ WHERE E1.job_id = E2.job_id
 ORDER BY
 `Nome completo funcionário 1` ASC,
 `Nome completo funcionário 2` ASC;
-    

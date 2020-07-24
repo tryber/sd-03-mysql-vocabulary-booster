@@ -1,9 +1,8 @@
 USE hr;
 
 DELIMITER $$
-	CREATE PROCEDURE   
-    BEGIN
+CREATE PROCEDURE   
+BEGIN
     
-    END $$
+END $$
 DELIMITER ;
-

@@ -12,4 +12,3 @@ ORDER BY
 `Nome de contato` ASC,
 `Empresa que fez o envio` ASC,
 `Data do pedido` ASC;
-    
