@@ -3,8 +3,8 @@ SELECT (
     FROM w3schools.products AS prod
     WHERE prod.ProductID = ordDet.ProductID
   ) AS `Produto`,
-  MAX(ordDet.Quantity) AS `Mínima`,
-  MIN(ordDet.Quantity) AS `Máxima`,
+  MIN(ordDet.Quantity) AS `Mínima`,
+  MAX(ordDet.Quantity) AS `Máxima`,
   ROUND(AVG(ordDet.Quantity), 2) AS `Média`
 FROM w3schools.order_details AS ordDet
 GROUP BY `Produto`
