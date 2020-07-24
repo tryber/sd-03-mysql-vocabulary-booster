@@ -1,7 +1,6 @@
-USE hr;
 SELECT UCASE(CONCAT(first_name, ' ', last_name)) AS 'Nome Completo',
     hire_date AS 'Data de início',
     salary AS 'Salário'
-FROM employees
-WHERE MONTH(hire_date) IN (1, 2, 3)
-ORDER BY first_name , last_name, hire_date;
+FROM hr.employees 
+WHERE hire_date LIKE '%-01-%' OR '%-02-%' OR '%-03-%'
+ORDER BY `Nome Completo`, hire_date;
