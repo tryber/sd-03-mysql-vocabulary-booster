@@ -3,4 +3,4 @@
   WHERE customersa.Country = customersb.Country AND customersa.CustomerName <> customersb.CustomerName
   GROUP BY customersa.Country,customersa.ContactName
   ORDER BY 1;
- 
+  
