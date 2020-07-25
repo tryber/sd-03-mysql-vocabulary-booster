@@ -2,10 +2,10 @@ USE hr;
 
 DELIMITER $$
 
-CREATE PROCEDURE buscar_quantidade_de_empregos_por_funcionario(MAIL VARCHAR(50))
-
+CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(MAIL VARCHAR(50))
+RETURNS INT READS SQL DATA
 BEGIN
-
+DECLARE RESPONSE INT;
 SELECT
     COUNT(EMPLOYEE_ID)
 FROM
@@ -17,8 +17,8 @@ WHERE
             hr.employees
         WHERE
             EMAIL = MAIL)
-GROUP BY EMPLOYEE_ID;
-
+INTO RESPONSE ;
+RETURN RESPONSE;
 END $$
 
 DELIMITER ;
