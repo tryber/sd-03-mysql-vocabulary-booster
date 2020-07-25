@@ -1,6 +1,3 @@
-SELECT * FROM hr.job_history;
-SELECT * FROM hr.employees;
-
 SELECT CONCAT(e.FIRST_NAME,' ',e.LAST_NAME) AS `Nome completo`,
 CONCAT(DAY(j.START_DATE),'/',MONTH(j.START_DATE),'/',YEAR(j.START_DATE)) AS 'Data de início',
 CONCAT(DAY(j.END_DATE),'/',MONTH(j.END_DATE),'/',YEAR(j.END_DATE)) AS 'Data de rescisão',
