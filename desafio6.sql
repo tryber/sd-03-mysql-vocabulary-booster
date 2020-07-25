@@ -4,7 +4,7 @@ SELECT
         FROM
             hr.employees employee
         WHERE
-            employee.employee_id = history.employee_id) AS 'Nome Completo',
+            employee.employee_id = history.employee_id) AS 'Nome completo',
     (SELECT 
             job_title
         FROM
