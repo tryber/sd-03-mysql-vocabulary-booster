@@ -1,4 +1,4 @@
-SELECT CONCAT(em.FIRST_NAME, ' ', em.LAST_NAME)
+SELECT UCASE(CONCAT(em.FIRST_NAME, ' ', em.LAST_NAME))
   AS "Nome completo",
 DATE_FORMAT(jh.START_DATE, '%Y-%m-%d')
   AS "Data de início",
