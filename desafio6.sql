@@ -4,13 +4,14 @@ SELECT
         FROM
             hr.employees employee
         WHERE
-            employee.employee_id = history.employee_id) AS 'Nome completo',
+            employee.employee_id = history.employee_id) AS 'Nome Completo',
     (SELECT 
             job_title
         FROM
             hr.jobs AS job
         WHERE
             history.job_id = job.job_id) AS Cargo,
+        history.start_date AS 'Data de início do cargo',    
     (SELECT 
             DEPARTMENT_NAME
         FROM
