@@ -4,7 +4,3 @@ WHERE A.ContactName <> B.ContactName
 AND A.Country = B.Country
 GROUP BY (A.CustomerID)
 ORDER BY `Nome`;
-
-SELECT * FROM w3schools.customers;
-
-
