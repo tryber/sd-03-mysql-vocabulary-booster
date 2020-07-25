@@ -12,5 +12,3 @@ WHERE EMPLOYEE_ID = id INTO quant;
 RETURN quant;
 END $$
 DELIMITER ;
-
-SELECT buscar_quantidade_de_empregos_por_funcionario("NKOCHHAR");
