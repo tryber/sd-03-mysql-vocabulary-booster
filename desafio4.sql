@@ -1,5 +1,5 @@
 SELECT j.JOB_TITLE AS 'Cargo',
-AVG(e.SALARY) AS 'Diferença entre salários máximo e mínimo',
+ROUND(AVG(e.SALARY),2) AS 'Média salarial',
 CASE
 WHEN AVG(e.SALARY) BETWEEN 2000 AND 5800 
 THEN 'Júnior'
