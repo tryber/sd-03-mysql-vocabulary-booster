@@ -1,5 +1,5 @@
 SELECT 
-    product.productName AS 'Nome',
+    product.productName AS 'Produto',
     product.price AS 'Preço'
     FROM w3schools.order_details o
     INNER JOIN w3schools.products AS product
