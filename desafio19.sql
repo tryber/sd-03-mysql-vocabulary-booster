@@ -20,7 +20,7 @@ SELECT
 (SELECT JOB_TITLE FROM jobs WHERE jobs.JOB_ID = job_history.JOB_ID) AS Cargo
 FROM job_history
 WHERE EMPLOYEE_ID = (SELECT EMPLOYEE_ID FROM employees WHERE EMAIL = input_email)
-ORDER BY Departamento;
+ORDER BY Departamento, Cargo;
 END $$
 SET DELIMITER ;
 

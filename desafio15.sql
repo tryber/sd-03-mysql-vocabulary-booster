@@ -7,9 +7,10 @@ USE hr;
 DELIMITER $$
 CREATE PROCEDURE buscar_media_por_cargo(IN job_title VARCHAR(35))
 BEGIN
-SELECT ROUND(AVG(SALARY), 2) as `Média salarial` FROM employees
-WHERE JOB_ID = (SELECT JOB_ID FROM jobs WHERE JOB_TITLE = job_title);
+SELECT ROUND(AVG(E.SALARY), 2) as `Média salarial` FROM employees AS E
+INNER JOIN jobs as J ON J.JOB_ID = E.JOB_ID
+WHERE J.JOB_TITLE = job_title;
 END $$
 DELIMITER ;
 
-CALL buscar_media_por_cargo('Accountant');
+CALL buscar_media_por_cargo('Programmer');
