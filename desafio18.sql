@@ -6,7 +6,8 @@ RETURNS INT READS SQL DATA
 BEGIN
 DECLARE hired_total INT;
     SELECT COUNT(*) FROM hr.employees
-    WHERE MONTH(HIRE_DATE) = month AND YEAR(HIRE_DATE) = year INTO hired_total
+    WHERE MONTH(HIRE_DATE) = month AND YEAR(HIRE_DATE) = year
+    INTO hired_total;
     RETURN hired_total;
 END $$
 
