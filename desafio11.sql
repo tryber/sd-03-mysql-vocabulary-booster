@@ -1,5 +1,6 @@
-SELECT b.CustomerName AS Nome, a.Country AS País,  count(a.CustomerName) AS "Número de compatriotas"
+SELECT b.ContactName AS Nome, a.Country AS País,  count(a.CustomerName) - 1 AS "Número de compatriotas"
 FROM w3schools.customers as a, w3schools.customers as b
 where a.Country = b.Country
-GROUP BY b.CustomerName,a.Country
-ORDER BY "Nome"
+GROUP BY b.ContactName,a.Country
+HAVING `Número de compatriotas` > 0
+ORDER BY `Nome`
