@@ -2,8 +2,8 @@ USE hr;
 DELIMITER $$
 
 CREATE PROCEDURE buscar_quantidade_de_empregos_por_funcionario(
-	IN email_to VARCHAR(255),
-    out count_out INT
+IN email_to VARCHAR(255),
+out count_out INT
 )
 BEGIN
 SELECT COUNT(*)
