@@ -6,12 +6,12 @@ CREATE PROCEDURE buscar_quantidade_de_empregos_por_funcionario(
     out count_out INT
 )
 BEGIN
-	SELECT COUNT(*)
-    INTO count_out
-	FROM hr.job_history AS JB
-	INNER JOIN hr.employees AS E
-	ON E.EMPLOYEE_ID = JB.EMPLOYEE_ID
-	WHERE EMAIL = email_to;
+SELECT COUNT(*)
+INTO count_out
+FROM hr.job_history AS JB
+INNER JOIN hr.employees AS E
+ON E.EMPLOYEE_ID = JB.EMPLOYEE_ID
+WHERE EMAIL = email_to;
 END $$
 
 DELIMITER ;
