@@ -7,7 +7,7 @@ BEGIN
   FROM hr.employees emp
   INNER JOIN hr.jobs j
   ON emp.JOB_ID = j.JOB_ID
-  WHERE j.JOB_TITLE = 'Programmer';
+  WHERE j.JOB_TITLE = cargo;
 END $$
 
 DELIMETER ;
