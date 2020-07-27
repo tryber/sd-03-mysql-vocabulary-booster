@@ -10,7 +10,7 @@ from w3schools.customers cs
 where
 c.Country = cs.Country
 group by
-cs.Country) AS `Números de compratiotas`
+cs.Country) AS `Números de compatriotas`
 from
 w3schools.customers c) AS `contador`
 order by `Nome`;
