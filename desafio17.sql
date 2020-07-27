@@ -20,5 +20,4 @@ FROM
     hr.job_history
 WHERE
     employee_id <> 0
-ORDER BY `Nome completo` , `Anos
-trabalhados`;
+ORDER BY `Nome completo` , `Anos trabalhados`;
