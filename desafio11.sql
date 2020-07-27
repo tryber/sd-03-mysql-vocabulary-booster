@@ -7,4 +7,5 @@ SELECT contactName AS 'Nome',
 FROM w3schools.customers AS cus
 
 ) AS A
-WHERE `Número de compatriotas` <> 0;
+WHERE `Número de compatriotas` <> 0
+ORDER BY `Nome`;
