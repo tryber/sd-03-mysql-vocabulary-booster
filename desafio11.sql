@@ -1,0 +1,16 @@
+select
+*
+from
+(
+select
+c.ContactName AS `Nome`, c.Country AS `País`,
+(select
+count(cs.Country) - 1
+from w3schools.customers cs
+where
+c.Country = cs.Country
+group by
+cs.Country) AS `Números de compratiotas`
+from
+w3schools.customers c) AS `contador`
+order by `Nome`;
