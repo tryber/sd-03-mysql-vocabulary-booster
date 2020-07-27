@@ -1,6 +1,8 @@
 USE hr;
 DELIMITER $$
-CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(inputEmail VARCHAR(50))
+CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(
+    inputEmail VARCHAR(50)
+)
 RETURNS INT READS SQL DATA
 DETERMINISTIC
 BEGIN
@@ -10,8 +12,7 @@ BEGIN
     WHERE job_id LIKE (
         SELECT job_id
     FROM hr.employees
-    WHERE email LIKE inputEmail) INTO qt_empregados;
+    WHERE email LIKE inputEmail)INTO qt_empregados;
     RETURN qt_empregados;
-END
-$$
+END $$
 DELIMITER ;
