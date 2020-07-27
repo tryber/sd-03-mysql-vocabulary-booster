@@ -10,4 +10,5 @@ SELECT
         ROUND(DATEDIFF(END_DATE,START_DATE) / 365, 2) AS `Anos trabalhados`
 FROM
     hr.job_history
-WHERE YEAR(START_DATE) <> 0;
+WHERE YEAR(START_DATE) <> 0
+ORDER BY `Nome completo`, `Anos trabalhados`;
