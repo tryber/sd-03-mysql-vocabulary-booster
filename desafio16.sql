@@ -10,7 +10,7 @@ SELECT
 FROM
     hr.employees
 WHERE
-   employees.EMAIL = email INTO id;
+    employees.EMAIL = email INTO id;
 SELECT 
     COUNT(*)
 FROM
