@@ -13,4 +13,5 @@ group by
 cs.Country) AS `Número de compatriotas`
 from
 w3schools.customers c) AS `contador`
+where `Número de compatriotas` <> 0
 order by `Nome`;
