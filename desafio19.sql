@@ -30,7 +30,8 @@ WHERE
         FROM
             hr.employees
         WHERE
-            EMAIL = MAIL);
+            EMAIL = MAIL)
+ORDER BY `Departamento`, `Cargo`;
 END $$
 
 DELIMITER ;
