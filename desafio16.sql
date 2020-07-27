@@ -12,7 +12,7 @@ BEGIN
     WHERE job_id LIKE (
         SELECT job_id
     FROM hr.employees
-    WHERE email LIKE inputEmail)INTO qt_empregados;
+    WHERE email LIKE inputEmail) INTO qt_empregados;
     RETURN qt_empregados;
 END $$
 DELIMITER ;
