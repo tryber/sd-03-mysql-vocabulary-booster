@@ -9,5 +9,4 @@ hr.employees AS employees_1,
 hr.employees AS employees_2
 WHERE employees_1.JOB_ID = employees_2.JOB_ID
 AND employees_1.EMPLOYEE_ID <> employees_2.EMPLOYEE_ID
-ORDER BY `Nome completo funcionário 1`,
-`Nome completo funcionário 2`;
+ORDER BY `Nome completo funcionário 1`, `Nome completo funcionário 2`;
