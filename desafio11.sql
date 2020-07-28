@@ -1,5 +1,3 @@
-SELECT * FROM customers;
-
 SELECT customers.ContactName AS `Nome`,
 customers.Country AS `País`,
 COUNT(customers_B.Country) AS 'Número de compatriotas'
