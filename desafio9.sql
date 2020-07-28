@@ -1,12 +1,12 @@
 SELECT
-   CONCAT(EN.FirstName, ' ', EN.LastName) AS 'Nome completo',
-   COUNT(DO.EmployeeID) AS 'Total de pedidos' 
+    CONCAT(EN.FirstName, ' ', EN.LastName) AS 'Nome completo',
+    COUNT(DO.EmployeeID) AS 'Total de pedidos' 
 FROM
-   w3schools.employees AS EN,
-   w3schools.orders AS DO 
+    w3schools.employees AS EN,
+    w3schools.orders AS DO 
 WHERE
-   EN.EmployeeID = DO.EmployeeID 
+    EN.EmployeeID = DO.EmployeeID 
 GROUP BY
-   CONCAT(EN.FirstName, ' ', EN.LastName) 
+    CONCAT(EN.FirstName, ' ', EN.LastName) 
 ORDER BY
-   2;
+    2;

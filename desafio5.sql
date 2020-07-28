@@ -5,4 +5,4 @@ SELECT
     Round(max_salary / 12, 2) AS 'Média máxima mensal' 
 FROM   
     hr.jobs 
-ORDER  BY 2, 1; 
+ORDER  BY 2, 1;

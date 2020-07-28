@@ -6,7 +6,7 @@ CASE
     WHEN AVG(SALARY)>7500   AND AVG(SALARY)<10501   THEN 'Sênior'
     WHEN AVG(SALARY)>10500  THEN 'CEO' END AS 'Senioridade'
 FROM 
-  hr.employees 
+    hr.employees 
 GROUP BY 
-  JOB_ID 
+    JOB_ID 
 ORDER BY 2, 1;

@@ -14,4 +14,4 @@ WHERE
 ORDER  BY 
     C.contactname ASC, 
     S.shippername ASC, 
-    D.orderdate   ASC; 
+    D.orderdate   ASC;
