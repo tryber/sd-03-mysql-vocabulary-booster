@@ -6,5 +6,5 @@ JOIN w3schools.shippers AS B
 ON B.ShipperID = A.ShipperID
 JOIN w3schools.customers AS C
 ON C.CustomerID = A.CustomerID
-WHERE A.CustomerID <> 0
+WHERE B.ShipperID <> 3
 ORDER BY C.ContactName, B.ShipperName, A.OrderDate;
