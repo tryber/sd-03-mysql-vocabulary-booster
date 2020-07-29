@@ -10,4 +10,3 @@ ON e.JOB_ID = j.JOB_ID
 WHERE j.JOB_TITLE= job_name;
 END $$
 DELIMITER ;
-CALL buscar_media_por_cargo('Programmer');
