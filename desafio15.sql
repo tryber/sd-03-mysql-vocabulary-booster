@@ -1,3 +1,5 @@
+USE hr;
+DELIMITER $$
 CREATE PROCEDURE buscar_media_por_cargo(IN job_name VARCHAR(100), OUT media_wage DOUBLE)
 BEGIN
 SELECT
