@@ -10,5 +10,4 @@ ON e.JOB_ID = j.JOB_ID
 WHERE j.JOB_TITLE= job_name;
 END $$
 DELIMITER ;
-CALL buscar_media_por_cargo('Programmer', @media_wage_return);
-SELECT @media_wage_return;
+CALL buscar_media_por_cargo('Programmer');
