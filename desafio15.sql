@@ -7,6 +7,6 @@ ROUND(AVG(e.SALARY), 2) AS 'Média salarial' INTO media_wage
 FROM hr.employees AS e
 JOIN hr.jobs AS j
 ON e.JOB_ID = j.JOB_ID
-WHERE j.JOB_TITLE= job_name;
+WHERE j.JOB_TITLE = job_name;
 END $$
 DELIMITER ;
