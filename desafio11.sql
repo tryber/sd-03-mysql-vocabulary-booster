@@ -1,5 +1,5 @@
-SELECT cust_um.*, COUNT(cust_dois.City) FROM w3schools.customers cust_um
-INNER JOIN w3schools.customers cust_dois on cust_um.City = cust_dois.City
-GROUP BY cust_dois.Country
-HAVING COUNT(cust_dois.City)>1;
--- WHERE (SELECT CustomerName FROM w3schools.customers cust_dois WHERE cust_um.City = cust_dois.City);
+SELECT cust_um.ContactName Nome, cust_um.Country País, COUNT(cust_dois.Country) `Número de compatriotas`
+FROM w3schools.customers cust_um, w3schools.customers cust_dois 
+WHERE cust_um.Country = cust_dois.Country AND cust_um.CustomerID <> cust_dois.CustomerID
+GROUP BY cust_um.ContactName, cust_um.Country
+ORDER BY cust_um.ContactName;
