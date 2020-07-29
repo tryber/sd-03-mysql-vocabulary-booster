@@ -8,7 +8,8 @@ WHERE dep.DEPARTMENT_ID = jobh.DEPARTMENT_ID
 ) AS Departamento,
 jobs.JOB_TITLE "Cargo"
 FROM hr.employees emp, hr.job_history jobh, hr.jobs jobs
-WHERE jobh.EMPLOYEE_ID = emp.EMPLOYEE_ID AND emp.EMAIL = email AND jobs.JOB_ID = jobh.JOB_ID;
+WHERE jobh.EMPLOYEE_ID = emp.EMPLOYEE_ID AND emp.EMAIL = email AND jobs.JOB_ID = jobh.JOB_ID
+ORDER BY Departamento, Cargo;
 END $$
 DELIMITER ;
 
