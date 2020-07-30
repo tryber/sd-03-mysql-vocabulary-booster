@@ -7,4 +7,4 @@ INNER JOIN w3schools.order_details AS details
 ON products.ProductID = details.ProductID
 GROUP BY Produto
 HAVING `Média` > 20.00
-ORDER BY `Média` ASC;
+ORDER BY `Média` ASC, Produto;
