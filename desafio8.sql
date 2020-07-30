@@ -1,5 +1,5 @@
-SELECT customers.ContactName AS `Nome do contato`,
-shippers.ShipperName AS `Empresa que faz o envio`,
+SELECT customers.ContactName AS `Nome de contato`,
+shippers.ShipperName AS `Empresa que fez o envio`,
 orders.OrderDate AS `Data do pedido`
 FROM w3schools.orders AS orders
 INNER JOIN w3schools.customers AS customers
