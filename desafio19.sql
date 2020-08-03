@@ -34,4 +34,5 @@ WHERE
 ORDER BY `Departamento`, `Cargo`;
 END $$
 
+
 DELIMITER ;
