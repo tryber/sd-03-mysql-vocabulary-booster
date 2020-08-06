@@ -1,9 +1,12 @@
 SELECT 
-    CONCAT(E.FirstName, ' ', E.LastName) AS `Nome completo`,
-    COUNT(O.EmployeeID) AS `Total de pedidos`
+    a.ContactName AS `Nome`,
+    a.Country AS `País`,
+    COUNT(b.ContactName) AS `Número de compatriotas`
 FROM
-    w3schools.employees AS E
-        INNER JOIN
-    w3schools.orders AS O ON E.EmployeeID = O.EmployeeID
-GROUP BY `Nome Completo`
-ORDER BY `Total de pedidos`;
+    w3schools.customers AS a,
+    w3schools.customers AS b
+WHERE
+    a.ContactName <> b.ContactName
+        AND a.Country = b.Country
+GROUP BY a.CustomerID
+ORDER BY `Nome`;
