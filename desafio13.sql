@@ -10,4 +10,3 @@ WHERE
         WHERE
             Quantity > 80)
 ORDER BY `Produto`;
-    
