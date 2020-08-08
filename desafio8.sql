@@ -9,6 +9,6 @@ FROM
         JOIN
     w3schools.shippers AS s ON o.ShipperID = s.ShipperID
 WHERE
-    ShipperName = 'Speedy Express'
+    s.ShipperName = 'Speedy Express'
         OR 'United Package'
-ORDER BY ContactName , ShipperName , OrderDate;
+ORDER BY c.ContactName , s.ShipperName , o.OrderDate;
