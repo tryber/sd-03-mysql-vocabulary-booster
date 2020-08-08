@@ -5,7 +5,7 @@ SELECT
 FROM
     w3schools.orders AS o
         JOIN
-    w3schools.shippers AS s ON B.ShipperID = s.ShipperID
+    w3schools.shippers AS s ON s.ShipperID = s.ShipperID
         JOIN
     w3schools.customers AS c ON c.CustomerID = a.CustomerID
 WHERE
